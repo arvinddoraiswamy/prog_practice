@@ -1,0 +1,30 @@
+Hints:
+* READ the problem carefully. If something does not make sense **after** you've solved it, read again.
+* Get ONE solution right first. It's OK if its brute-force. Don't fine tune too fast -> Recipe for disaster
+* Build your test input up. Start really simple.
+* Lesser variables will make your program faster but figure this out *after* you have a working program
+* Debug your program from where the input comes IN. Not from where you see the error.
+* Blank values, new lines, data types are major enemies. Print type(var) out from time to time.
+* Remember to reset your variables :) :)
+  2 values which you want to skip
+* Make sure you don't have any print statements :)
+* Figure out how to generate general formulas
+* Try to avoid list copying
+
+Python:
+
+* break only breaks out of your innermost loop. "continue" is when you want to do something with all values except 1 or
+* If you want to swap, use lists. Do NOT use strings or tuples - they're immutable
+* lexicographic sorting is best done on strings
+* list1 = list2 is a reference. Use list1 = list2[:]
+* Use classes for linked lists. No random access possible
+
+Terminology:
+
+* Meta string - strings that can be made equal by 1 swap in either string
+* Jumping number - Numbers where every adjacent digit differs by exactly 1
+
+Not solved:
+* Flood fill (Got the recursion bit, but logic is flawed)
+* Knapsack (need to try again, now that I understand recursion)
+* Alternate OR/XOR: Too slow. Suspect list copying
