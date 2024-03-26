@@ -1,3 +1,27 @@
+# Fancy 2 pointer solution which I have no clue why it works except my blindly following hints
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        #Init two pointers now with 1 ptr at each end of the array
+        ptr1 = 0
+        ptr2 = len(height) - 1
+
+        #Store areas per iteration. Sort of anyway :)
+        areas = []
+
+        #Program ends when ptr1 == ptr2
+        while ptr1 != ptr2:
+            width = ptr2 - ptr1
+            ht = min(height[ptr1], height[ptr2])
+            area = width * ht
+            if height[ptr1] < height[ptr2]:
+                ptr1 += 1
+            else:
+                ptr2 -= 1
+            areas.append(area)
+
+        return max(areas)
+
+# original O(n^2) solution from which I could not move
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         ptr1 = 0
