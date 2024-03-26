@@ -5,8 +5,8 @@ class Solution:
         ptr1 = 0
         ptr2 = len(height) - 1
 
-        #Store areas per iteration. Sort of anyway :)
-        areas = []
+        #Store max area per "iteration"
+        max_area = 0
 
         #Program ends when ptr1 == ptr2
         while ptr1 != ptr2:
@@ -17,9 +17,11 @@ class Solution:
                 ptr1 += 1
             else:
                 ptr2 -= 1
-            areas.append(area)
+            
+            if area > max_area:
+                max_area = area
 
-        return max(areas)
+        return max_area
 
 # original O(n^2) solution from which I could not move
 class Solution:
