@@ -1,11 +1,22 @@
-# This was an unsorted array, so it took a long time to sort it which reduced performance. If we can find a better way to sort it, or use 2 pointers on an 
-# unsorted list, this could be quicker.
+from collections import OrderedDict
+
 class Solution:
     def maxOperations(self, nums: List[int], k: int) -> int:
+        #Tried with an inbuilt sorting function on a list
+        nums.sort()
+
+        #Tried sorting a dictionary and copying it back but that's not much improvement either
+        #numdict = defaultdict(int)
+        #for i in nums:
+        #    numdict[i] += 1
+        #nums = []
+        #for k1,v1 in sorted(numdict.items()):
+        #    for times in range(0,v1):
+        #        nums.append(k1)
+      
         ptr1 = 0
         ptr2 = len(nums) - 1
         ops = 0
-        nums.sort()
         while ptr1 < ptr2:
             sum = nums[ptr1] + nums[ptr2]
             if sum == k:
