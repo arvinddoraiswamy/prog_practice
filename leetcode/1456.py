@@ -1,6 +1,6 @@
 class Solution:
     def maxVowels(self, s: str, k: int) -> int:
-        vowels = ['a', 'e', 'i', 'o', 'u']
+        vowels = 'aeiou'
         ptr1 = 0
         ptr2 = k-1
         cur_vowels = max_vowels = 0
