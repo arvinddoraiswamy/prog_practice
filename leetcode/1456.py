@@ -13,10 +13,11 @@ class Solution:
                 for ch in window:
                     if ch in vowels:
                         cur_vowels += 1
+                window = deque(window)
             # For all other iterations except the 1st one
             elif ptr1 > 0:
                 # Check if the new character is a vowel
-                if window[k-1] in vowels:
+                if window[-1] in vowels:
                     cur_vowels += 1
             
             # Set max number of vowels accordingly
@@ -33,7 +34,7 @@ class Solution:
             
             # Add the next char to the window
             if ptr2 < len(s):
-                window += s[ptr2]
-                window = window[1:]
+                window.append(s[ptr2])
+                window.popleft()
     
         return max_vowels
