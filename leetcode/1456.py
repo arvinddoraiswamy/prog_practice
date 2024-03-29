@@ -1,6 +1,6 @@
 class Solution:
     def maxVowels(self, s: str, k: int) -> int:
-        # Putting the vowels into a string is WAY faster than a list. Found thanks to a solution
+        # Putting the vowels into a string is WAY faster than a list. Found thanks to a solution I read
         vowels = 'aeiou'
 
         # Initialize window pointers
@@ -16,6 +16,7 @@ class Solution:
                 for ch in window:
                     if ch in vowels:
                         cur_vowels += 1
+                # Don't HAVE to do this but it makes it easier to do with a double ended queue
                 window = deque(window)
             # For all other iterations except the 1st one
             elif ptr1 > 0:
