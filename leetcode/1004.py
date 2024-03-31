@@ -21,6 +21,7 @@ class Solution:
                     #Effectively hence, zc -1 + 1 = zc. So just move ptr2 to the right by 1
                     #Also it's a new start, so we have to reset our current count
                     current = 0
+                    ptr1 += 1
                     ptr2 += 1
         
         return max_ones
