@@ -12,9 +12,6 @@ class Solution:
                     ptr2 += 1
                 else:
                     # Reached max contiguous length possible
-                    current = ptr2 - ptr1
-                    if current > max_ones:
-                        max_ones = current
                     while nums[ptr1] == 1:
                         ptr1 += 1
                     #The moment you hit a zero you're decreasing and increasing zc by 1, and moving ptr2
@@ -23,5 +20,9 @@ class Solution:
                     current = 0
                     ptr1 += 1
                     ptr2 += 1
+
+            current = ptr2 - ptr1
+            if current > max_ones:
+                max_ones = current
         
         return max_ones
