@@ -18,7 +18,9 @@ class Solution:
                     ptr1 += 1
                     ptr2 += 1
             
-            current = ptr2 - ptr1 - 1       
+            # The -1 here is legit as if we have to delete one element and return the length. Its not the most
+            # contiguous number of 1's like in the other problem
+            current = ptr2 - ptr1 - 1
             if current > max_ones:
                 max_ones = current
 
