@@ -1,4 +1,3 @@
-import string
 class Solution:
     def removeStars(self, s: str) -> str:
         l2 = []
